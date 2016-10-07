@@ -2,7 +2,6 @@ C:\Users\Randy\Desktop\MySQLCommander\MySQLCommander\MySQLCommander\bin\Debug\My
 F:\MySQL Commander\MySQLCommander\bin\Debug\MySQLCommander.exe.config
 F:\MySQL Commander\MySQLCommander\bin\Debug\MySQLCommander.exe
 F:\MySQL Commander\MySQLCommander\bin\Debug\MySQLCommander.pdb
-F:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.csprojResolveAssemblyReference.cache
 F:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.MySQLCommander.resources
 F:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.Properties.Resources.resources
 F:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.csproj.GenerateResource.Cache
