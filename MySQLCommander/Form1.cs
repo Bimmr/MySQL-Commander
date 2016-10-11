@@ -52,7 +52,7 @@ namespace MySQLCommander
 
             //Otherwise update the mysql path with the latest found
             else
-                txtMySQL.Text = path + "\\MySQL Server " + highest;
+                txtMySQL.Text = path + "\\MySQL Server " + highest +"\\bin";
 
             return true;
         }
@@ -103,7 +103,7 @@ namespace MySQLCommander
             cmd.StartInfo.FileName = "cmd.exe";
             cmd.StartInfo.RedirectStandardInput = true;
             cmd.StartInfo.RedirectStandardOutput = true;
-            cmd.StartInfo.CreateNoWindow = true;
+            //cmd.StartInfo.CreateNoWindow = true;
             cmd.StartInfo.UseShellExecute = false;
             cmd.StartInfo.WorkingDirectory = @mysql;
             cmd.Start();
@@ -111,7 +111,9 @@ namespace MySQLCommander
             //Enter the inputs
             cmd.StandardInput.AutoFlush = true;
             cmd.StandardInput.WriteLine("mysql -u root  " + (password != "" ? "-p " + password : "") + " < " + database);
+            MessageBox.Show("");
             cmd.StandardInput.WriteLine("mysql -u root " + (password != "" ? "-p " + password : "") + " < " + input + " > " + output);
+            MessageBox.Show("");
             cmd.StandardInput.Close();
             cmd.WaitForExit();
 

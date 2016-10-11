@@ -7,3 +7,12 @@ F:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.Properties.Resources.
 F:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.csproj.GenerateResource.Cache
 F:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.exe
 F:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.pdb
+E:\MySQL Commander\MySQLCommander\bin\Debug\MySQLCommander.exe.config
+E:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.exe
+E:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.pdb
+E:\MySQL Commander\MySQLCommander\bin\Debug\MySQLCommander.exe
+E:\MySQL Commander\MySQLCommander\bin\Debug\MySQLCommander.pdb
+E:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.csprojResolveAssemblyReference.cache
+E:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.MySQLCommander.resources
+E:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.Properties.Resources.resources
+E:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.csproj.GenerateResource.Cache
