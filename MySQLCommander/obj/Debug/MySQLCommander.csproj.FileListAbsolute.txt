@@ -16,3 +16,12 @@ E:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.csprojResolveAssembly
 E:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.MySQLCommander.resources
 E:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.Properties.Resources.resources
 E:\MySQL Commander\MySQLCommander\obj\Debug\MySQLCommander.csproj.GenerateResource.Cache
+E:\MySQLCommander\MySQLCommander\bin\Debug\MySQLCommander.exe.config
+E:\MySQLCommander\MySQLCommander\obj\Debug\MySQLCommander.exe
+E:\MySQLCommander\MySQLCommander\obj\Debug\MySQLCommander.pdb
+E:\MySQLCommander\MySQLCommander\bin\Debug\MySQLCommander.exe
+E:\MySQLCommander\MySQLCommander\bin\Debug\MySQLCommander.pdb
+E:\MySQLCommander\MySQLCommander\obj\Debug\MySQLCommander.csprojResolveAssemblyReference.cache
+E:\MySQLCommander\MySQLCommander\obj\Debug\MySQLCommander.MySQLCommander.resources
+E:\MySQLCommander\MySQLCommander\obj\Debug\MySQLCommander.Properties.Resources.resources
+E:\MySQLCommander\MySQLCommander\obj\Debug\MySQLCommander.csproj.GenerateResource.Cache

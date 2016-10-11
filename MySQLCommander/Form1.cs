@@ -110,10 +110,10 @@ namespace MySQLCommander
 
             //Enter the inputs
             cmd.StandardInput.AutoFlush = true;
-            cmd.StandardInput.WriteLine("mysql -u root  " + (password != "" ? "-p " + password : "") + " < " + database);
-            MessageBox.Show("");
-            cmd.StandardInput.WriteLine("mysql -u root " + (password != "" ? "-p " + password : "") + " < " + input + " > " + output);
-            MessageBox.Show("");
+            cmd.StandardInput.WriteLine("mysql -uroot  " + (password != "" ? "-p" + password : "") + " < " + database);
+            //MessageBox.Show("");
+            cmd.StandardInput.WriteLine("mysql -uroot " + (password != "" ? "-p" + password : "") + " < " + input + " > " + output);
+            //MessageBox.Show("");
             cmd.StandardInput.Close();
             cmd.WaitForExit();
 
@@ -180,10 +180,14 @@ namespace MySQLCommander
         private bool validateSQLFile(string file)
         {
             bool valid = false;
+            if (file == "openFileDialog1")
+                file = null;
             if (file != null && !file.EndsWith(".sql"))
                 MessageBox.Show("Invalid .SQL file.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else if (file != null && file.Contains(" "))
                 MessageBox.Show("File path shouldn't contain a space.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (file == null)
+                valid = false;
             else
                 valid = true;
             return valid;
