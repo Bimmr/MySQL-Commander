@@ -35,7 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.ofdInput = new System.Windows.Forms.OpenFileDialog();
+            this.ofdFileSelect = new System.Windows.Forms.OpenFileDialog();
             this.btnSelectInput = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtOutput = new System.Windows.Forms.TextBox();
@@ -108,9 +108,9 @@
             this.txtPassword.Size = new System.Drawing.Size(327, 20);
             this.txtPassword.TabIndex = 8;
             // 
-            // ofdInput
+            // ofdFileSelect
             // 
-            this.ofdInput.FileName = "openFileDialog1";
+            this.ofdFileSelect.Filter = "SQL Files|*.sql";
             // 
             // btnSelectInput
             // 
@@ -232,7 +232,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.OpenFileDialog ofdInput;
+        private System.Windows.Forms.OpenFileDialog ofdFileSelect;
         private System.Windows.Forms.Button btnSelectInput;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtOutput;

@@ -103,7 +103,7 @@ namespace MySQLCommander
             cmd.StartInfo.FileName = "cmd.exe";
             cmd.StartInfo.RedirectStandardInput = true;
             cmd.StartInfo.RedirectStandardOutput = true;
-            //cmd.StartInfo.CreateNoWindow = true;
+            cmd.StartInfo.CreateNoWindow = true;
             cmd.StartInfo.UseShellExecute = false;
             cmd.StartInfo.WorkingDirectory = @mysql;
             cmd.Start();
@@ -111,15 +111,19 @@ namespace MySQLCommander
             //Enter the inputs
             cmd.StandardInput.AutoFlush = true;
             cmd.StandardInput.WriteLine("mysql -uroot  " + (password != "" ? "-p" + password : "") + " < " + database);
-            //MessageBox.Show("");
             cmd.StandardInput.WriteLine("mysql -uroot " + (password != "" ? "-p" + password : "") + " < " + input + " > " + output);
-            //MessageBox.Show("");
             cmd.StandardInput.Close();
             cmd.WaitForExit();
 
-            MessageBox.Show("The file has successfully been created: \n" +
-                "File Location: " + output,
-                "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (new FileInfo(output).Length == 0)
+                MessageBox.Show("Unable to create file. Possible reasons:\n"
+                    + "- Invalid Password\n"
+                    + "- Server not running",
+                    "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                MessageBox.Show("The file has successfully been created: \n" +
+                    "File Location: " + output,
+                    "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
 
@@ -130,9 +134,9 @@ namespace MySQLCommander
         /// <param name="e"></param>
         private void btnSelectInput_Click(object sender, EventArgs e)
         {
-            DialogResult result = ofdInput.ShowDialog();
+            DialogResult result = ofdFileSelect.ShowDialog();
 
-            string file = ofdInput.FileName;
+            string file = ofdFileSelect.FileName;
             if (validateSQLFile(file))
                 txtInput.Text = file;
 
@@ -154,9 +158,9 @@ namespace MySQLCommander
         /// <param name="e"></param>
         private void btnSelectDatabase_Click(object sender, EventArgs e)
         {
-            DialogResult result = ofdInput.ShowDialog();
+            DialogResult result = ofdFileSelect.ShowDialog();
 
-            string file = ofdInput.FileName;
+            string file = ofdFileSelect.FileName;
             if (validateSQLFile(file))
                 txtDatabase.Text = file;
 
@@ -180,7 +184,7 @@ namespace MySQLCommander
         private bool validateSQLFile(string file)
         {
             bool valid = false;
-            if (file == "openFileDialog1")
+            if (file == "")
                 file = null;
             if (file != null && !file.EndsWith(".sql"))
                 MessageBox.Show("Invalid .SQL file.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
